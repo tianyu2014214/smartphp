@@ -1,0 +1,17 @@
+#!/usr/bin/env php
+<?php
+
+// 定义应用目录
+define('APP_PATH', __DIR__ . '/app/');
+
+// 引入框架入口文件
+require __DIR__ . '/smartphp/base.php';
+
+// 应用初始化
+\smart\App::init();
+
+// 关闭错误输出到客户端
+config('error_render', false);
+
+// 设置日志存储目录
+config('default_log_path', LOGS_PATH . 'cmd' . DS);
